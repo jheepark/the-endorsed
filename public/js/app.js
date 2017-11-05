@@ -75,7 +75,7 @@ var EventListener = {
 
 module.exports = EventListener;
 }).call(this,require('_process'))
-},{"./emptyFunction":6,"_process":33}],2:[function(require,module,exports){
+},{"./emptyFunction":6,"_process":34}],2:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -272,7 +272,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = emptyObject;
 }).call(this,require('_process'))
-},{"_process":33}],8:[function(require,module,exports){
+},{"_process":34}],8:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -458,7 +458,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
-},{"_process":33}],13:[function(require,module,exports){
+},{"_process":34}],13:[function(require,module,exports){
 'use strict';
 
 /**
@@ -688,7 +688,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = warning;
 }).call(this,require('_process'))
-},{"./emptyFunction":6,"_process":33}],19:[function(require,module,exports){
+},{"./emptyFunction":6,"_process":34}],19:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -843,7 +843,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 module.exports = checkPropTypes;
 
 }).call(this,require('_process'))
-},{"./lib/ReactPropTypesSecret":24,"_process":33,"fbjs/lib/invariant":12,"fbjs/lib/warning":18}],21:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":24,"_process":34,"fbjs/lib/invariant":12,"fbjs/lib/warning":18}],21:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1449,7 +1449,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 };
 
 }).call(this,require('_process'))
-},{"./checkPropTypes":20,"./lib/ReactPropTypesSecret":24,"_process":33,"fbjs/lib/emptyFunction":6,"fbjs/lib/invariant":12,"fbjs/lib/warning":18,"object-assign":19}],23:[function(require,module,exports){
+},{"./checkPropTypes":20,"./lib/ReactPropTypesSecret":24,"_process":34,"fbjs/lib/emptyFunction":6,"fbjs/lib/invariant":12,"fbjs/lib/warning":18,"object-assign":19}],23:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -1481,7 +1481,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./factoryWithThrowingShims":21,"./factoryWithTypeCheckers":22,"_process":33}],24:[function(require,module,exports){
+},{"./factoryWithThrowingShims":21,"./factoryWithTypeCheckers":22,"_process":34}],24:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -18720,7 +18720,7 @@ module.exports = ReactDOMFiberEntry;
 }
 
 }).call(this,require('_process'))
-},{"_process":33,"fbjs/lib/EventListener":1,"fbjs/lib/ExecutionEnvironment":2,"fbjs/lib/camelizeStyleName":4,"fbjs/lib/containsNode":5,"fbjs/lib/emptyFunction":6,"fbjs/lib/emptyObject":7,"fbjs/lib/focusNode":8,"fbjs/lib/getActiveElement":9,"fbjs/lib/hyphenateStyleName":11,"fbjs/lib/invariant":12,"fbjs/lib/performanceNow":16,"fbjs/lib/shallowEqual":17,"fbjs/lib/warning":18,"object-assign":19,"prop-types":23,"prop-types/checkPropTypes":20,"react":30}],26:[function(require,module,exports){
+},{"_process":34,"fbjs/lib/EventListener":1,"fbjs/lib/ExecutionEnvironment":2,"fbjs/lib/camelizeStyleName":4,"fbjs/lib/containsNode":5,"fbjs/lib/emptyFunction":6,"fbjs/lib/emptyObject":7,"fbjs/lib/focusNode":8,"fbjs/lib/getActiveElement":9,"fbjs/lib/hyphenateStyleName":11,"fbjs/lib/invariant":12,"fbjs/lib/performanceNow":16,"fbjs/lib/shallowEqual":17,"fbjs/lib/warning":18,"object-assign":19,"prop-types":23,"prop-types/checkPropTypes":20,"react":30}],26:[function(require,module,exports){
 /*
  React v16.0.0
  react-dom.production.min.js
@@ -19020,7 +19020,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/react-dom.development.js":25,"./cjs/react-dom.production.min.js":26,"_process":33}],28:[function(require,module,exports){
+},{"./cjs/react-dom.development.js":25,"./cjs/react-dom.production.min.js":26,"_process":34}],28:[function(require,module,exports){
 (function (process){
 /** @license React v16.0.0
  * react.development.js
@@ -20722,7 +20722,7 @@ module.exports = ReactEntry;
 }
 
 }).call(this,require('_process'))
-},{"_process":33,"fbjs/lib/emptyFunction":6,"fbjs/lib/emptyObject":7,"fbjs/lib/invariant":12,"fbjs/lib/warning":18,"object-assign":19,"prop-types/checkPropTypes":20}],29:[function(require,module,exports){
+},{"_process":34,"fbjs/lib/emptyFunction":6,"fbjs/lib/emptyObject":7,"fbjs/lib/invariant":12,"fbjs/lib/warning":18,"object-assign":19,"prop-types/checkPropTypes":20}],29:[function(require,module,exports){
 /*
  React v16.0.0
  react.production.min.js
@@ -20758,7 +20758,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/react.development.js":28,"./cjs/react.production.min.js":29,"_process":33}],31:[function(require,module,exports){
+},{"./cjs/react.development.js":28,"./cjs/react.production.min.js":29,"_process":34}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20770,6 +20770,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _ProductList = require('../Product/ProductList');
+
+var _ProductList2 = _interopRequireDefault(_ProductList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20832,104 +20836,7 @@ var HomePage = function (_React$Component) {
           _react2.default.createElement(
             'section',
             { className: 'container' },
-            _react2.default.createElement(
-              'ul',
-              { className: 'product-list' },
-              _react2.default.createElement(
-                'li',
-                { className: 'product-item' },
-                _react2.default.createElement(
-                  'a',
-                  { className: 'upvote-button', href: '#' },
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    _react2.default.createElement('i', { className: 'fa fa-sort-asc' })
-                  ),
-                  this.state.productList[0].upvote
-                ),
-                _react2.default.createElement('img', { className: 'product-item-media', src: this.state.productList[0].media }),
-                _react2.default.createElement(
-                  'section',
-                  { className: 'product-item-info' },
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#' },
-                    _react2.default.createElement(
-                      'h2',
-                      null,
-                      this.state.productList[0].name
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    this.state.productList[0].description
-                  ),
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#' },
-                    _react2.default.createElement('img', { className: 'small-avatar', src: this.state.productList[0].maker.avatar })
-                  )
-                ),
-                _react2.default.createElement(
-                  'a',
-                  { className: 'product-item-link', href: this.state.productList[0].link },
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    _react2.default.createElement('i', { 'class': 'fa fa-external-link' })
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                { className: 'product-item' },
-                _react2.default.createElement(
-                  'a',
-                  { className: 'upvote-button', href: '#' },
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    _react2.default.createElement('i', { className: 'fa fa-sort-asc' })
-                  ),
-                  this.state.productList[1].upvote
-                ),
-                _react2.default.createElement('img', { className: 'product-item-media', src: this.state.productList[1].media }),
-                _react2.default.createElement(
-                  'section',
-                  { className: 'product-item-info' },
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#' },
-                    _react2.default.createElement(
-                      'h2',
-                      null,
-                      this.state.productList[1].name
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    this.state.productList[1].description
-                  ),
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#' },
-                    _react2.default.createElement('img', { className: 'small-avatar', src: this.state.productList[1].maker.avatar })
-                  )
-                ),
-                _react2.default.createElement(
-                  'a',
-                  { className: 'product-item-link', href: this.state.productList[1].link },
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    _react2.default.createElement('i', { 'class': 'fa fa-external-link' })
-                  )
-                )
-              )
-            )
+            this.state.productList ? _react2.default.createElement(_ProductList2.default, { productList: this.state.productList }) : null
           )
         )
       );
@@ -20941,7 +20848,146 @@ var HomePage = function (_React$Component) {
 
 exports.default = HomePage;
 
-},{"react":30}],32:[function(require,module,exports){
+},{"../Product/ProductList":32,"react":30}],32:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ProductList = function (_React$Component) {
+  _inherits(ProductList, _React$Component);
+
+  function ProductList() {
+    _classCallCheck(this, ProductList);
+
+    return _possibleConstructorReturn(this, (ProductList.__proto__ || Object.getPrototypeOf(ProductList)).apply(this, arguments));
+  }
+
+  _createClass(ProductList, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "ul",
+        { className: "product-list" },
+        _react2.default.createElement(
+          "li",
+          { className: "product-item" },
+          _react2.default.createElement(
+            "a",
+            { className: "upvote-button", href: "#" },
+            _react2.default.createElement(
+              "span",
+              null,
+              _react2.default.createElement("i", { className: "fa fa-sort-asc" })
+            ),
+            this.props.productList[0].upvote
+          ),
+          _react2.default.createElement("img", { className: "product-item-media", src: this.props.productList[0].media }),
+          _react2.default.createElement(
+            "section",
+            { className: "product-item-info" },
+            _react2.default.createElement(
+              "a",
+              { href: "#" },
+              _react2.default.createElement(
+                "h2",
+                null,
+                this.props.productList[0].name
+              )
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              this.props.productList[0].description
+            ),
+            _react2.default.createElement(
+              "a",
+              { href: "#" },
+              _react2.default.createElement("img", { className: "small-avatar", src: this.props.productList[0].maker.avatar })
+            )
+          ),
+          _react2.default.createElement(
+            "a",
+            { className: "product-item-link", href: this.props.productList[0].link },
+            _react2.default.createElement(
+              "span",
+              null,
+              _react2.default.createElement("i", { className: "fa fa-external-link" })
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "li",
+          { className: "product-item" },
+          _react2.default.createElement(
+            "a",
+            { className: "upvote-button", href: "#" },
+            _react2.default.createElement(
+              "span",
+              null,
+              _react2.default.createElement("i", { className: "fa fa-sort-asc" })
+            ),
+            this.props.productList[1].upvote
+          ),
+          _react2.default.createElement("img", { className: "product-item-media", src: this.props.productList[1].media }),
+          _react2.default.createElement(
+            "section",
+            { className: "product-item-info" },
+            _react2.default.createElement(
+              "a",
+              { href: "#" },
+              _react2.default.createElement(
+                "h2",
+                null,
+                this.props.productList[1].name
+              )
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              this.props.productList[1].description
+            ),
+            _react2.default.createElement(
+              "a",
+              { href: "#" },
+              _react2.default.createElement("img", { className: "small-avatar", src: this.props.productList[1].maker.avatar })
+            )
+          ),
+          _react2.default.createElement(
+            "a",
+            { className: "product-item-link", href: this.props.productList[1].link },
+            _react2.default.createElement(
+              "span",
+              null,
+              _react2.default.createElement("i", { className: "fa fa-external-link" })
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return ProductList;
+}(_react2.default.Component);
+
+exports.default = ProductList;
+
+},{"react":30}],33:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -20987,7 +21033,7 @@ var App = function (_React$Component) {
 
 _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('root'));
 
-},{"./HomePage":31,"react":30,"react-dom":27}],33:[function(require,module,exports){
+},{"./HomePage":31,"react":30,"react-dom":27}],34:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -21173,4 +21219,4 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}]},{},[32]);
+},{}]},{},[33]);
