@@ -6,7 +6,7 @@ import ProductStore from '../../stores/ProductStore'
 import Actions from '../../actions'
 
 let config = {
-  apiKey: process.env.api_key,
+  apiKey: "AIzaSyCom139ZEnv8Z_a9MJ-ZC2ajS4l1QVUDX0",
   authDomain: "codehunt-demo-556d8.firebaseapp.com",
   databaseURL: "https://codehunt-demo-556d8.firebaseio.com",
   projectId: "codehunt-demo-556d8",
