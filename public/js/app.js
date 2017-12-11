@@ -64883,6 +64883,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var config = {
+  // apiKey: process.env.api_key,
   apiKey: "AIzaSyCom139ZEnv8Z_a9MJ-ZC2ajS4l1QVUDX0",
   authDomain: "codehunt-demo-556d8.firebaseapp.com",
   databaseURL: "https://codehunt-demo-556d8.firebaseio.com",
@@ -64912,7 +64913,7 @@ var HomePage = (0, _connectToStores2.default)(_class = function (_React$Componen
         _react2.default.createElement(
           'header',
           null,
-          _react2.default.createElement('img', { src: '/img/banner.jpeg', width: '100%' })
+          _react2.default.createElement('img', { src: '/img/theendorsedv1.png', width: '100%', 'class': 'headerBanner' })
         ),
         _react2.default.createElement(
           'section',
@@ -64999,16 +65000,17 @@ var LoginPopup = function (_React$Component) {
       return _react2.default.createElement(
         _Popup2.default,
         _extends({}, this.props, { style: 'login-popup' }),
-        _react2.default.createElement('img', { src: '/img/kitty.png' }),
+        _react2.default.createElement('img', { src: '/img/logo.png', className: 'logo' }),
         _react2.default.createElement(
           'h1',
           null,
           'Login to Join The Community'
         ),
+        _react2.default.createElement('br', null),
         _react2.default.createElement(
           'p',
           null,
-          'CodeHunt is a Community to share and geek out about the latest code, podcast and news. Join us :)'
+          'The Endorsed is an online community where you can share and geek out about the latest websites and products. Join us today!'
         ),
         _react2.default.createElement(
           'button',
@@ -65426,15 +65428,6 @@ var Navbar = function (_React$Component) {
       );
     }
   }, {
-    key: 'renderLogo',
-    value: function renderLogo() {
-      return _react2.default.createElement(
-        'a',
-        { href: '#' },
-        _react2.default.createElement('img', { src: '/img/favicon.ico' })
-      );
-    }
-  }, {
     key: 'renderUser',
     value: function renderUser() {
       return _react2.default.createElement(
@@ -65480,7 +65473,6 @@ var Navbar = function (_React$Component) {
           'section',
           { className: 'navbar' },
           this.renderProductSearch(),
-          this.renderLogo(),
           this.renderUser()
         )
       );
