@@ -27,12 +27,6 @@ class Navbar extends React.Component {
     );
   }
 
-  renderLogo() {
-    return (
-      <a href="#"><img src="/img/favicon.ico"/></a>
-    );
-  }
-
   renderUser() {
     return (
       <section className="right-side">
@@ -63,7 +57,6 @@ class Navbar extends React.Component {
       <section>
         <section className="navbar">
           {this.renderProductSearch()}
-          {this.renderLogo()}
           {this.renderUser()}
         </section>
       </section>
