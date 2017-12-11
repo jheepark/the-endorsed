@@ -6,7 +6,7 @@ class ProductList extends React.Component {
     return (
       <ul className="product-list">
         { this.props.productList.map(function(item, idx){
-          return <ProductItem key={idx} {...item}/> //spread operator -lists all props
+          return <ProductItem key={idx} pid={item.key} {...item}/> //spread operator -lists all props
         })
       }
       </ul>

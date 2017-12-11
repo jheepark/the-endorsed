@@ -1,5 +1,6 @@
 import alt from '../alt'
 import Firebase from 'firebase'
+import _ from 'lodash'
 
 class Actions {
   initSession () {
@@ -56,7 +57,13 @@ class Actions {
   getProducts() {
     return(dispatch) => {
       Firebase.database().ref('products').on('value', function(snapshot) {
-        let products = snapshot.val();
+        let productsValue = snapshot.val();
+        let products = _(productsValue).keys().map((productKey) => {
+          let item = _.clone(productsValue[productKey])
+          item.key = productKey;
+          return item;
+        })
+        .value();
         dispatch(products)
       })
     }
@@ -67,7 +74,47 @@ class Actions {
       Firebase.database().ref('products').push(product);
     }
   }
-  
+
+  addVote(productId, userId) {
+    return (dispatch) => {
+      let voteRef = Firebase.database().ref('votes/'+productId+'/'+userId);
+      let upvoteRef = Firebase.database().ref('products/'+productId+'/upvote');
+      voteRef.on('value', (snapshot) => {
+        if(snapshot.val() == null) {
+          voteRef.set(true)
+
+          let vote = 0;
+          upvoteRef.on('value', function(snapshot) {
+            vote = snapshot.val();
+          });
+          upvoteRef.set(vote+1);
+        }
+      })
+    }
+  }
+
+  addComment(productId, comment) {
+    return (dispatch) => {
+      Firebase.database().ref('/comments/'+productId).push(comment);
+    }
+  }
+
+  getComments(productId) {
+    return (dispatch) => {
+      let commentRef = Firebase.database().ref('comments/'+productId);
+
+      commentRef.on('value', function(snapshot) {
+        let commentsValue = snapshot.val();
+        let comments = _(commentsValue).keys().map((commentKey) => {
+          let item = _.clone(commentsValue[commentKey]);
+          item.key = commentKey;
+          return item;
+        })
+        .value();
+        dispatch(comments);
+      });
+    }
+  }
 }
 
 export default alt.createActions(Actions)

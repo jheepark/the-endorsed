@@ -1,5 +1,6 @@
-import React from 'react';
-import ProductPopup from './ProductPopup';
+import React from 'react'
+import ProductPopup from './ProductPopup'
+import Upvote from './Upvote'
 
 class ProductItem extends React.Component {
   constructor(){
@@ -15,17 +16,6 @@ class ProductItem extends React.Component {
 
   hideProductPopup = () => {
     this.setState({productPopupStatus:false});
-  }
-
-  renderUpvoteButton() {
-    return (
-      <a className="upvote-button" href="#">
-        <span>
-          <i className="fa fa-sort-asc"></i>
-        </span>
-        {this.props.upvote}
-      </a>
-    );
   }
 
   renderNewWindowIcon() {
@@ -51,14 +41,15 @@ class ProductItem extends React.Component {
       </section>
     )
   }
+
   render() {
     return (
       <li className="product-item">
-        {this.renderUpvoteButton()}
+        <Upvote {...this.props} />
         <img className="product-item-media" src={this.props.media} />
         {this.renderInfoSession()}
         {this.renderNewWindowIcon()}
-        <ProductPopup status={this.state.productPopupStatus} hidePopup={this.hideProductPopup}/>
+        <ProductPopup {...this.props} status={this.state.productPopupStatus} hidePopup={this.hideProductPopup}/>
       </li>
     );
   }

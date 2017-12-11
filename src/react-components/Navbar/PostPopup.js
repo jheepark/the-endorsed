@@ -34,16 +34,16 @@ class PostPopup extends React.Component {
                 <td><input placeholder="Enter product's description" ref="description"/></td>
               </tr><tr>
                 <td>Link</td>
-                <td><input placeholder="http://www..."/></td>
+                <td><input placeholder="http://www..." ref="link"/></td>
               </tr><tr>
                 <td>Media</td>
-                <td><input placeholder="Paste a direct link to an image" ref="link"/></td>
+                <td><input placeholder="Paste a direct link to an image" ref="media"/></td>
               </tr>
             </tbody>
           </table>
         </section>
         <footer className="post-footer">
-          <button onClick={this.handlePost} className="post-btn" ref="media">Hunt it!</button>
+          <button onClick={this.handlePost} className="post-btn" >Hunt it!</button>
         </footer>
       </Popup>
     );

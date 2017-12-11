@@ -5,7 +5,6 @@ import connectToStores from 'alt-utils/lib/connectToStores'
 import ProductStore from '../../stores/ProductStore'
 import Actions from '../../actions'
 
-
 let config = {
 
 };
@@ -15,17 +14,6 @@ Firebase.initializeApp(config);
 class HomePage extends React.Component {
   constructor() {
     super();
-    // this.state = {
-    //   productList: []
-    // }
-    //
-    // Firebase.database().ref('products').on('value', (snapshot) => {
-    //   var products = snapshot.val();
-    //
-    //   this.setState({
-    //     productList: products
-    //   })
-    // });
     Actions.getProducts();
   }
 

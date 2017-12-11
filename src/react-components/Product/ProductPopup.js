@@ -1,48 +1,59 @@
-import React from 'react';
-import Popup from '../Navbar/Popup';
+import React from 'react'
+import Popup from '../Navbar/Popup'
+import Upvote from './Upvote'
+import Actions from '../../actions'
+import connectToStores from 'alt-utils/lib/connectToStores'
+import ProductStore from '../../stores/ProductStore'
 
+@connectToStores
 class ProductPopup extends React.Component {
   constructor() {
     super();
-    this.state = {
-      product: {
-        id: 2,
-        name: 'Code4Startup',
-        link: 'https://code4startup.com',
-        media: '/img/code4startup.jpeg',
-        upvote: 278,
-        description: 'Code for starups',
-        maker: {
-          name: 'leo',
-          avatar: '/img/leo.jpeg'
-        }
-      },
-      comments: [
-        {
-          name: 'Leo',
-          avatar: '/img/leo.jpeg',
-          content: 'I love this product'
-        },
-        {
-          name: 'Jonny',
-          avatar: '/img/hieu.jpeg',
-          content: 'Me too'
-        }
-      ]
-    }
+}
+  static getStores() {
+    return [ProductStore];
+  }
+
+  static getPropsFromStores() {
+    return ProductStore.getState();
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.status && this.props.status != nextProps.status) {
+    Actions.getComments(this.props.pid);
+  }
+    return true;
   }
 
   renderBodyDiscussion () {
     return (
       <section className='discussion'>
       <h2>Discussion</h2>
-      <section className='post-comment'>
-        <img className='medium-avatar' src='/img/leo.jpeg' />
-        <input placeholder="What do you think of this product?" />
-      </section>
+      {
+        this.props.user
+        ?
+        <section className='post-comment'>
+          <img className='medium-avatar' src={this.props.user.avatar} />
+          <input placeholder="What do you think of this product?" onKeyUp={this.handleComment}/>
+        </section>
+        :
+        null
+      }
       {this.renderComments()}
       </section>
     )
+  }
+
+  handleComment = (e) => {
+    if(e.keyCode === 13 && e.target.value.length > 0) {
+      let comment = {
+        content: e.target.value,
+        name: this.props.user.name,
+        avatar: this.props.user.avatar
+      }
+      Actions.addComment(this.props.pid, comment);
+      e.target.value = null;
+    }
   }
 
   renderBody () {
@@ -59,7 +70,7 @@ class ProductPopup extends React.Component {
     return (
       <ul className='comment-list'>
         {
-          this.state.comments.map(function(comment, idx){
+          this.props.comments.map(function(comment, idx){
             return(
               <li key={idx}>
                 <img className='medium-avatar' src={comment.avatar} />
@@ -75,26 +86,15 @@ class ProductPopup extends React.Component {
     )
   }
 
-  renderUpvoteButton () {
-    return (
-      <a className="upvote-button" href="#">
-        <span>
-          <i className="fa fa-sort-asc"></i>
-        </span>
-        {this.state.product.upvote}
-      </a>
-    );
-  }
-
   renderHeader() {
     return (
-      <header style={{backgroundImage: 'url(' + this.state.product.media + ')'}}>
+      <header style={{backgroundImage: 'url(' + this.props.media + ')'}}>
         <section className="header-shadow">
-          <h1>{this.state.product.name}</h1>
-          <p>{this.state.product.description}</p>
+          <h1>{this.props.name}</h1>
+          <p>{this.props.description}</p>
           <section>
-            {this.renderUpvoteButton()}
-            <a className="getit-btn" href={this.state.product.link} target="_blank">GET IT</a>
+            <Upvote {...this.props} />
+            <a className="getit-btn" href={this.props.link} target="_blank">VISIT</a>
           </section>
         </section>
       </header>
