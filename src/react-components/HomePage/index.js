@@ -1,53 +1,63 @@
 import React from 'react'
-import ProductList from '../Product/ProductList';
+import ProductList from '../Product/ProductList'
+import Firebase from 'firebase'
+import connectToStores from 'alt-utils/lib/connectToStores'
+import ProductStore from '../../stores/ProductStore'
+import Actions from '../../actions'
 
+
+let config = {
+
+};
+Firebase.initializeApp(config);
+
+@connectToStores
 class HomePage extends React.Component {
-  constructor () {
-    super()
-    this.state = {
-      productList: [
-        {
-          id: 1,
-          name: 'Codecademy',
-          link: 'https://Codecademy.com',
-          media: '/img/codecademy.jpeg',
-          upvote: 169,
-          description: 'Code for anyone',
-          maker: {
-            name: 'hieu',
-            avatar: '/img/hieu.jpeg'
-          }
-        },
-        {
-          id: 2,
-          name: 'Code4Startup',
-          link: 'https://code4startup.com',
-          media: '/img/code4startup.jpeg',
-          upvote: 278,
-          description: 'Code for startups',
-          maker: {
-            name: 'leo',
-            avatar: '/img/leo.jpeg'
-          }
-        }
-      ]
-    }
+  constructor() {
+    super();
+    // this.state = {
+    //   productList: []
+    // }
+    //
+    // Firebase.database().ref('products').on('value', (snapshot) => {
+    //   var products = snapshot.val();
+    //
+    //   this.setState({
+    //     productList: products
+    //   })
+    // });
+    Actions.getProducts();
   }
-  render () {
+
+  static getStores() {
+    return [ProductStore];
+  }
+
+  static getPropsFromStores() {
+    return ProductStore.getState();
+  }
+
+  render() {
     return (
-      <div>
+      <section>
         <header>
-          <img src='/img/banner.jpeg' width='100%' />
+          <img src="/img/banner.jpeg" width="100%" />
         </header>
 
         <section>
           <section className="container">
-            { this.state.productList ? <ProductList productList={this.state.productList}/> : null }
+            {
+              this.props.products
+              ?
+              <ProductList productList={this.props.products}/>
+              :
+              null
+            }
           </section>
         </section>
-      </div>
-    )
-  };
+      </section>
+    );
+  }
 }
 
-export default HomePage
+export default HomePage;
